@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>rcproxy test</title>
+  </head>
+
+  <body>
+    <!-- HMAC key: secret -->
+    <!-- rcproxy -a 127.0.0.1:8080 -k secret -s -->
+
+    <h1>Base64 encoded URLs</h1>
+    <!-- 200 ok -->
+    <!-- https://www.recreoviral.com/wp-content/uploads/2015/05/Gatos-que-se-sientas-chistosos-23.jpg -->
+    <img src="http://127.0.0.1:8080/87f07895570c92ba4e2a3140cc281c44715c16cc25bda8ceb199d176293aa3f5/aHR0cHM6Ly93d3cucmVjcmVvdmlyYWwuY29tL3dwLWNvbnRlbnQvdXBsb2Fkcy8yMDE1LzA1L0dhdG9zLXF1ZS1zZS1zaWVudGFzLWNoaXN0b3Nvcy0yMy5qcGc" />
+    <!-- 404 not found -->
+    <!-- https://httpstat.us/404 -->
+    <img src="http://127.0.0.1:8080/27e1aafaa0f10f5dbe95a8160da5fccd81baf33df058a4135c30fccd599a244f/aHR0cHM6Ly9odHRwc3RhdC51cy80MDQ" />
+    <!-- retrieval error (500 internal server error) -->
+    <!-- https://httpstat.us/500 -->
+    <img src="http://127.0.0.1:8080/816689cdc869f9aec0e269ac7117f3c057751a22195e0c3390158470b76aec00/aHR0cHM6Ly9odHRwc3RhdC51cy81MDA" />
+    <!-- audio -->
+    <!-- https://www.2600.com/offthehook/mp3files/2021/off_the_hook__20210602-128.mp3 -->
+    <audio controls>
+      <source src="http://127.0.0.1:8080/4b654fbe56966a070932cef4f85da9ff6b76d30ed9e5513eb58cdb5c98b0ecf3/aHR0cHM6Ly93d3cuMjYwMC5jb20vb2ZmdGhlaG9vay9tcDNmaWxlcy8yMDIxL29mZl90aGVfaG9va19fMjAyMTA2MDItMTI4Lm1wMw" type="audio/mpeg">
+    </audio> 
+    <!-- video -->
+    <!-- https://archive.org/download/SampleVideo1280x7205mb/SampleVideo_1280x720_5mb.mp4 -->
+    <video width="320" height="240" controls>
+      <source src="http://127.0.0.1:8080/8104410c8fb20c3b9673e3fda721adcb421884d45628168775b02e91e56c6a26/aHR0cHM6Ly9hcmNoaXZlLm9yZy9kb3dubG9hZC9TYW1wbGVWaWRlbzEyODB4NzIwNW1iL1NhbXBsZVZpZGVvXzEyODB4NzIwXzVtYi5tcDQ" type="video/mp4">
+    </video>
+
+    <h1>HEX encoded URLs</h1>
+    <!-- 200 ok -->
+    <!-- https://www.recreoviral.com/wp-content/uploads/2015/05/Gatos-que-se-sientas-chistosos-23.jpg -->
+    <img src="http://127.0.0.1:8080/87f07895570c92ba4e2a3140cc281c44715c16cc25bda8ceb199d176293aa3f5/68747470733A2F2F7777772E72656372656F766972616C2E636F6D2F77702D636F6E74656E742F75706C6F6164732F323031352F30352F4761746F732D7175652D73652D7369656E7461732D63686973746F736F732D32332E6A7067" />
+    <!-- 404 not found -->
+    <!-- https://httpstat.us/404 -->
+    <img src="http://127.0.0.1:8080/27e1aafaa0f10f5dbe95a8160da5fccd81baf33df058a4135c30fccd599a244f/68747470733A2F2F68747470737461742E75732F343034" />
+    <!-- retrieval error (500 internal server error) -->
+    <!-- https://httpstat.us/500 -->
+    <img src="http://127.0.0.1:8080/816689cdc869f9aec0e269ac7117f3c057751a22195e0c3390158470b76aec00/68747470733A2F2F68747470737461742E75732F353030" />
+    <!-- audio -->
+    <!-- https://www.2600.com/offthehook/mp3files/2021/off_the_hook__20210602-128.mp3 -->
+    <audio controls>
+      <source src="http://127.0.0.1:8080/4b654fbe56966a070932cef4f85da9ff6b76d30ed9e5513eb58cdb5c98b0ecf3/68747470733A2F2F7777772E323630302E636F6D2F6F6666746865686F6F6B2F6D703366696C65732F323032312F6F66665F7468655F686F6F6B5F5F32303231303630322D3132382E6D7033" type="audio/mpeg">
+    </audio> 
+    <!-- video -->
+    <!-- https://archive.org/download/SampleVideo1280x7205mb/SampleVideo_1280x720_5mb.mp4 -->
+    <video width="320" height="240" controls>
+      <source src="http://127.0.0.1:8080/8104410c8fb20c3b9673e3fda721adcb421884d45628168775b02e91e56c6a26/68747470733A2F2F617263686976652E6F72672F646F776E6C6F61642F53616D706C65566964656F3132383078373230356D622F53616D706C65566964656F5F31323830783732305F356D622E6D7034" type="video/mp4">
+    </video>
+    
+  </body>
+</html>

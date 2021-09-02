@@ -1,0 +1,25 @@
+[package]
+name = "rcproxy"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+base64 = "0.13"
+env_logger = "0.8"
+futures = "0.3"
+hex = "0.4"
+gotham = "0.6"
+gotham_derive = "0.6"
+hmac = "0.11"
+ipnet = "2.3"
+lazy_static = "1.4"
+log = "0.4"
+mime = "0.3"
+regex = "1.5"
+reqwest = { version = "0.11", features = ["blocking"] }
+serde = "1.0"
+serde_derive = "1.0"
+sha2 = "0.9"
+structopt = "0.3"
+tokio = { version = "1.7", features = ['full'] }
+url = "0.2"
