@@ -1,5 +1,5 @@
 # rcproxy
-rcproxy is a content proxy to securely serve HTTP assets via HTTPS. It is implemented in Rust and heavily inspired by [camo]() and [go-camo]().
+rcproxy is a content proxy to securely serve HTTP assets via HTTPS. It is implemented in Rust and heavily inspired by [camo](https://github.com/atmos/camo) and [go-camo](https://github.com/cactus/go-camo).
 
 # Features
 - Supports Base64 and HEX encoded URLs
